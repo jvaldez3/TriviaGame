@@ -51,12 +51,12 @@ var trivia = {
     },
     start: function () {
         timer = setInterval(trivia.countdown, 1000);
-        $(".wrapper").prepend('<h2>Time Remaining: <span id = "counter" >60</span> Seconds</h2>')
+        $(".wrapper").prepend("<h2>Time Remaining: <span id = 'counter' >60</span> Seconds</h2>")
         $("#start").remove();
         for (var i = 0; i < questions.length; i++) {
             $(".wrapper").append("<h2>" + questions[i].question + "</h2>");
             for (var t = 0; t < questions[i].answers.length; t++) {
-                $(".wrapper").append("<input type='radio' name='question- " + i + "' value = ' " + questions[i].answers[t] + "'>" + questions[i].answers[t])
+                $(".wrapper").append("<input type='radio' name='question-" + i + "'value = '" + questions[i].answers[t] + "'>" + questions[i].answers[t])
             }
         }
         $(".wrapper").append("<br><button id = 'finished' >Done</button>")
